@@ -2,19 +2,17 @@
 
 package com.company;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.io.*;
 
 public class file {
     public static void main(String[] args) throws Exception
     {
-        FileOutputStream fos = new FileOutputStream("demo.txt");
+        File f = new File("demo.txt");
+        FileOutputStream fos = new FileOutputStream(f);
         DataOutputStream dos = new DataOutputStream(fos);
         dos.writeUTF("This is first line in demo.txt file");
 
-        FileInputStream fis = new FileInputStream("demo.txt");
+        FileInputStream fis = new FileInputStream(f);
         DataInputStream dis = new DataInputStream(fis);
 
         String text = dis.readUTF();
