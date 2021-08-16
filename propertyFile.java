@@ -22,6 +22,8 @@ public class propertyFile {
 
         System.out.println(pt.getProperty("uname"));
         System.out.println(pt.getProperty("password"));
+        
+         pt.list(System.out);     // to list out all the properties
 
     }
 }
